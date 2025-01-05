@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ip {
+  @apply border border-gray-500 rounded w-4/5  h-10 mx-auto;
+}
+.btn {
+  @apply hover:bg-red-600 p-2  text-white font-bold  rounded-md;
+}
