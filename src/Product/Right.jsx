@@ -4,8 +4,8 @@ import data from "./data";
 
 export default function Right({ id }) {
   return (
-    <div className="mt-5 flex flex-col ml-10 gap-y-3">
-      <h1 className="font-bold">{data[id].Name}</h1>
+    <div className="mt-3 flex flex-col ml-10 gap-y-2">
+      <h1 className="font-bold text-2xl">{data[id].Name}</h1>
       <div className="flex">
         <Stack spacing={1}>
           <Rating name="read-only" defaultValue={5} precision={0.5} />

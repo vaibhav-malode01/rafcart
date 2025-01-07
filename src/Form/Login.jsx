@@ -5,29 +5,32 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   const [data, setData] = useState({ email: "", password: "" });
-  //const [error, setError] = useState("Please enter the details  ");
+  const [error, setError] = useState(""); 
 
   const Schema = z.object({
     email: z.string().email("Invalid Email"),
-    password: z.string().min(8, "Password should be atleast 8 characters"),
+    password: z.string().min(8, "Password should be at least 8 characters"),
   });
 
   let handelSubmit = (event) => {
     event.preventDefault();
     const result = Schema.safeParse(data);
     if (result.success) {
-      {
-        alert("Form submitted successfully");
-      }
-      // Clear errors on success
+      setError(""); 
+      alert("Form submitted successfully"); 
     } else {
-      alert(result.error.errors[0]?.message || "Validation failed");
+      setError(result.error.errors[0]?.message || "Validation failed"); // Set the error message
     }
   };
 
   let handelInput = (event) => {
     setData((prevData) => {
-      return { ...prevData, [event.target.name]: event.target.value };
+      const updatedData = { ...prevData, [event.target.name]: event.target.value };
+      
+      const result = Schema.safeParse(updatedData);
+      if (result.success) setError("");
+      return updatedData;
+
     });
   };
 
@@ -37,7 +40,7 @@ export default function Login() {
         <div>
           <h1 className="font-bold ml-4 mt-3 text-2xl">LOGIN</h1>
           <p>
-            <h3 className="text-gray-400 ml-4">welcome back customer</h3>
+            <h3 className="text-gray-400 ml-4">Welcome back, customer</h3>
           </p>
         </div>
         <div>
@@ -68,9 +71,10 @@ export default function Login() {
                 id=""
               />
               <br />
+              {error && <p className="text-red-500 ml-4">{error}</p>} 
               <div className="flex justify-between">
                 <div className="ml-4">
-                  <input type="checkbox" value="test" />
+                  <Checkbox />
                   <span className="ml-2">Remember me</span>
                 </div>
 
@@ -89,7 +93,7 @@ export default function Login() {
           </form>
         </div>
 
-        <div className="flex  w-full mt-1 items-center">
+        <div className="flex w-full mt-1 items-center">
           <hr className="w-[190px] bg-gray-500"></hr>
           <span className="text-sm mx-auto">OR LOGIN WITH </span>
           <hr className="w-[190px] bg-gray-500"></hr>
@@ -105,7 +109,7 @@ export default function Login() {
         </div>
 
         <div className="mt-2 flex justify-center mb-5">
-          <span className="text-gray-500 mr-1">Dont have an account?</span>
+          <span className="text-gray-500 mr-1">Don't have an account?</span>
           <Link to="/Register" className="text-red-500">
             Register Now
           </Link>

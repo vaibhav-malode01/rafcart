@@ -11,7 +11,7 @@ export default function Card({ title, image }) {
         </div>
 
         <div className="ml-3 gap-y-2 ">
-          <h3 className="text-black  font-bold "> {title}</h3>
+          <h3 className="text-black  font-bold tracking-wide"> {title}</h3>
           <div className="flex gap-x-2">
             <h3 className="text-red-600 font-bold ">$45.00</h3>
             <h3 className="text-gray-600  line-through">55.00</h3>

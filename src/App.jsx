@@ -10,7 +10,13 @@ import Base from "./Shop/Base";
 import Account from "./Account/Account";
 import Product from "./Product/Product";
 import Cart from "./Cart/Cart";
+import { useLocation } from "react-router-dom";
+
+
+
+
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -76,6 +82,7 @@ function App() {
       path: "/Product",
       element: (
         <>
+          
           <Header />
           <Product />
           <Foot />
@@ -93,11 +100,12 @@ function App() {
       ),
     },
   ]);
+
+  
   return (
     <>
-      <div>
+    
         <RouterProvider router={router} />
-      </div>
     </>
   );
 }

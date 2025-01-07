@@ -1,7 +1,7 @@
 export default function Desc()
 {
     return (
-    <div className="flex flex-col ml-36 gap-y-4">
+    <div className="flex flex-col ml-36 gap-y-4 mt-3">
     <div> <h3>Product Details</h3></div>
     <hr className="text-gray-400"></hr>
     <div className="w-[800px]"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p></div>

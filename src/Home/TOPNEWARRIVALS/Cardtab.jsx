@@ -7,14 +7,14 @@ import i4 from "../../assets/Images/i4.jpg";
 export default function Cardtab() {
   return (
     <>
-      <div className="mt-10 ml-36 mb-8">
-        <h1 className="font-bold text-xl">Top New Arrivals</h1>
+      <div className="mt-12 ml-36 mb-12">
+        <h1 className="font-bold text-2xl">Top New Arrivals</h1>
       </div>
-      <div className="flex justify-evenly w-4/5 mx-20 gap-x-5 ml-36">
+      <div className="flex justify-center  w-[1230px] mx-auto gap-x-4">
         <Card title="GUYER CHAIR" image={i1} id={0} price={4000} />
-        <Card title="Bed King Size" image={i2} id={1} price={10000} />
-        <Card title="couple sofa" image={i3} id={2} price={8000} />
-        <Card title="matressX" image={i4} id={3} price={25000} />
+        <Card title="BED KING SIZE" image={i2} id={1} price={10000} />
+        <Card title="COUPLE COFA" image={i3} id={2} price={8000} />
+        <Card title="MATRESSX" image={i4} id={3} price={25000} />
       </div>
     </>
   );

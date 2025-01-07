@@ -2,7 +2,7 @@ import React from "react";
 import Checks from "./Checks";
 export default function Left() {
   return (
-    <div className="w-[360px] ml-36 flex flex-col bg-white shadow-md mt-2 pl-4 pr-4 mr-10">
+    <div className="w-[360px] ml-36 flex flex-col bg-white shadow-md mt-2 pl-4 pr-4 ">
       <div className="flex flex-col w-full gap-y-1 ">
         <div>
           <h1 className="font-bold">CATEGORIES</h1>

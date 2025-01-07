@@ -1,18 +1,16 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../../src/redux/Quantity/quantitySlice";
-
-export default function CartCard({ id, image, title, price, del }) {
+import { increment, decrement } from "../redux/Quantity/quantitySlice";
+import { Link } from "react-router-dom";
+export default function CartWish({ id, image, title, price, del }) {
   const quantities = useSelector((state) => state.quantities.quantities);
   const dispatch = useDispatch();
 
-  
   const quantity = quantities.find((q) => q.id === id)?.value || 1;
 
-
-  // console.log("Quantities:", quantities);
-  // console.log("Quantity for this card:", quantity);
+  console.log("Quantities:", quantities);
+  console.log("Quantity for this card:", quantity);
 
   return (
     <div>
@@ -42,6 +40,13 @@ export default function CartCard({ id, image, title, price, del }) {
           </button>
         </div>
         <div className="font-bold text-red-700">{price}</div>
+        <div className="w-full mt-2">
+          <Link to="/Cart" state={{ id, image, title, price }}>
+            <button className="bg-red-500 text-white w-full h-10 hover:text-lg p-2 font-bold  rounded-md">
+              Add to cart
+            </button>
+          </Link>
+        </div>
         <div>
           <button onClick={() => del(id)} className="p-2">
             <MdDelete className="text-2xl text-red-600 hover:text-red-800" />
