@@ -5,18 +5,24 @@ import Home from "./Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./Form/Login";
 import Signup from "./Form/Signup";
-import Main from "./MidPoint/Main";
+import Main from "./Wishlist/Main";
 import Base from "./Shop/Base";
 import Account from "./Account/Account";
 import Product from "./Product/Product";
 import Cart from "./Cart/Cart";
-import { useLocation } from "react-router-dom";
-
-
-
-
+import { Navigate } from "react-router-dom";
 function App() {
+  function RedirectToHomeOnRefresh() {
+    const navigate = useNavigate();
 
+    useEffect(() => {
+      if (window.location.pathname !== "/") {
+        navigate("/");
+      }
+    }, [navigate]);
+
+    return null; // This component only handles redirection, no UI is needed
+  }
   const router = createBrowserRouter([
     {
       path: "/",
@@ -27,6 +33,10 @@ function App() {
           <Foot />
         </>
       ),
+    },
+    {
+      path: "",
+      element: <Navigate to="/" />,
     },
     {
       path: "/Login",
@@ -82,7 +92,6 @@ function App() {
       path: "/Product",
       element: (
         <>
-          
           <Header />
           <Product />
           <Foot />
@@ -101,11 +110,9 @@ function App() {
     },
   ]);
 
-  
   return (
     <>
-    
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   );
 }

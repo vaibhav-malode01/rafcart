@@ -1,0 +1,196 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Modern Sofa",
+      "img_link": "https://images.unsplash.com/photo-1598300054059-bef5246f4b19",
+      "price": 499.99,
+      "category": "Sofa",
+      "brand": "HomeComfort"
+    },
+    {
+      "id": "2",
+      "name": "Leather Recliner Sofa",
+      "img_link": "https://images.unsplash.com/photo-1617083724232-15c1e9dfeebd",
+      "price": 799.99,
+      "category": "Sofa",
+      "brand": "ComfortLux"
+    },
+    {
+      "id": "3",
+      "name": "Sectional Sofa",
+      "img_link": "https://images.unsplash.com/photo-1617191518874-9868c7f53f4d",
+      "price": 899.99,
+      "category": "Sofa",
+      "brand": "CozyCorner"
+    },
+    {
+      "id": "4",
+      "name": "Fabric Sofa",
+      "img_link": "https://images.unsplash.com/photo-1595517805198-9d5e6c7e3f50",
+      "price": 599.99,
+      "category": "Sofa",
+      "brand": "HomeComfort"
+    },
+    {
+      "id": "5",
+      "name": "Sleeper Sofa",
+      "img_link": "https://images.unsplash.com/photo-1618223147546-8e824d2f1f77",
+      "price": 699.99,
+      "category": "Sofa",
+      "brand": "ComfortLux"
+    },
+    {
+      "id": "6",
+      "name": "Chesterfield Sofa",
+      "img_link": "https://images.unsplash.com/photo-1567016562767-ff131c4289aa",
+      "price": 999.99,
+      "category": "Sofa",
+      "brand": "CozyCorner"
+    },
+    {
+      "id": "7",
+      "name": "Wooden Coffee Table",
+      "img_link": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "price": 199.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "8",
+      "name": "Dining Chair Set",
+      "img_link": "https://images.unsplash.com/photo-1590949805404-b64e8d34f928",
+      "price": 299.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "9",
+      "name": "Bookshelf",
+      "img_link": "https://images.unsplash.com/photo-1586179405726-c2fd5a8486e3",
+      "price": 199.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "10",
+      "name": "Marble Top Dining Table",
+      "img_link": "https://images.unsplash.com/photo-1518832553480-bd69732249a6",
+      "price": 699.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "11",
+      "name": "TV Stand",
+      "img_link": "https://images.unsplash.com/photo-1556911220-e15b30ff0f84",
+      "price": 249.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "12",
+      "name": "Wardrobe",
+      "img_link": "https://images.unsplash.com/photo-1516910853505-39f61bcd007b",
+      "price": 599.99,
+      "category": "Furniture",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "13",
+      "name": "Wall Art Set",
+      "img_link": "https://images.unsplash.com/photo-1605902711622-cfb43c4437db",
+      "price": 89.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "14",
+      "name": "Wall Clock",
+      "img_link": "https://images.unsplash.com/photo-1541807084-5c52b6b18e08",
+      "price": 49.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "15",
+      "name": "Decorative Cushions",
+      "img_link": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad",
+      "price": 49.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "16",
+      "name": "Ceramic Vase",
+      "img_link": "https://images.unsplash.com/photo-1503145689929-7ed8c74fe22d",
+      "price": 29.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "17",
+      "name": "Table Lamp",
+      "img_link": "https://images.unsplash.com/photo-1505691723518-36a1e08d62b9",
+      "price": 39.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "18",
+      "name": "Picture Frame Set",
+      "img_link": "https://images.unsplash.com/photo-1523112691273-1fef0c98a5c9",
+      "price": 34.99,
+      "category": "Decor",
+      "brand": "ArtDecor"
+    },
+    {
+      "id": "19",
+      "name": "Cotton Bed Sheets",
+      "img_link": "https://images.unsplash.com/photo-1615930485030-378e6837e9e4",
+      "price": 39.99,
+      "category": "Bedroom",
+      "brand": "HomeComfort"
+    },
+    {
+      "id": "20",
+      "name": "Duvet Cover Set",
+      "img_link": "https://images.unsplash.com/photo-1602081185401-4d158b4d5f1c",
+      "price": 59.99,
+      "category": "Bedroom",
+      "brand": "ComfortLux"
+    },
+    {
+      "id": "21",
+      "name": "Nightstand",
+      "img_link": "https://images.unsplash.com/photo-1587074298832-966df6dc51fd",
+      "price": 149.99,
+      "category": "Bedroom",
+      "brand": "StorageKing"
+    },
+    {
+      "id": "22",
+      "name": "Bed Frame",
+      "img_link": "https://images.unsplash.com/photo-1588075596579-8a1a2f9e2a6b",
+      "price": 299.99,
+      "category": "Bedroom",
+      "brand": "CozyCorner"
+    },
+    {
+      "id": "23",
+      "name": "Mattress",
+      "img_link": "https://images.unsplash.com/photo-1581579207928-1c8a400d313c",
+      "price": 399.99,
+      "category": "Bedroom",
+      "brand": "ComfortLux"
+    },
+    {
+      "id": "24",
+      "name": "Wardrobe",
+      "img_link": "https://images.unsplash.com/photo-1516910853505-39f61bcd007b",
+      "price": 599.99,
+      "category": "Bedroom",
+      "brand": "StorageKing"
+    }
+  ]
+}

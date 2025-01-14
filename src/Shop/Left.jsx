@@ -1,16 +1,30 @@
 import React from "react";
 import Checks from "./Checks";
-export default function Left() {
+import { useState, useEffect } from "react";
+export default function Left({ setData }) {
+  // const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState("All");
+
+  useEffect(() => {
+    const categoryQuery = category !== "All" ? `?category=${category}` : "";
+    fetch(`http://localhost:3000/products${categoryQuery}`)
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, [category]);
+
+  function handelCat(cat) {
+    setCategory(cat);
+  }
   return (
     <div className="w-[360px] ml-36 flex flex-col bg-white shadow-md mt-2 pl-4 pr-4 ">
       <div className="flex flex-col w-full gap-y-1 ">
         <div>
           <h1 className="font-bold">CATEGORIES</h1>
         </div>
-        <Checks name="Bedroom" Count={15} />
-        <Checks name="Sofa" Count={15} />
-        <Checks name="Bedroom" Count={15} />
-        <Checks name="Bedroom" Count={15} />
+        <Checks name="Bedroom" Count={15} handel={handelCat} />
+        <Checks name="Sofa" Count={15} handel={handelCat} />
+        <Checks name="Bedroom" Count={15} handel={handelCat} />
+        <Checks name="Bedroom" Count={15} handel={handelCat} />
       </div>
       <hr className="mb-3 mt-3 " />
       <div className="flex flex-col w-full gap-y-1 ">
@@ -18,10 +32,11 @@ export default function Left() {
           <h1 className="font-bold">BRAND</h1>
         </div>
         <div>
-          <Checks name="Olymic" Count={15} />
-          <Checks name="Toyota" Count={15} />
-          <Checks name="ETC" Count={15} />
-          <Checks name="AUdi" Count={15} />
+          <Checks name="HomeComfort" Count={15} />
+
+          <Checks name="ComfortLux" Count={15} />
+          <Checks name="CozyCorner" Count={15} />
+          <Checks name="StorageKing" Count={15} />
           <Checks name="Benz" Count={15} />
         </div>
       </div>

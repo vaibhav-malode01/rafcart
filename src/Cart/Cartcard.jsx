@@ -2,21 +2,18 @@ import React from "react";
 import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../src/redux/Quantity/quantitySlice";
-
-export default function CartCard({ id, image, title, price, del }) {
+import { useCart } from "../context/CartContext";
+export default function CartCard({ id, image, title, price }) {
   const quantities = useSelector((state) => state.quantities.quantities);
   const dispatch = useDispatch();
 
-  
   const quantity = quantities.find((q) => q.id === id)?.value || 1;
 
-
-  // console.log("Quantities:", quantities);
-  // console.log("Quantity for this card:", quantity);
+  const { removeFromCart } = useCart();
 
   return (
     <div>
-      <div className="flex space-x-20 h-28 border border-gray-100 bg-gray-100 mb-5 items-center rounded-md">
+      <div className="flex space-x-20 h-28 w-full border border-gray-100 bg-gray-100 mb-5 items-center rounded-md">
         <div className="h-full w-20 mt-1">
           <img src={image} className="ml-8 mt-4 rounded-sm" alt={title} />
         </div>
@@ -43,7 +40,7 @@ export default function CartCard({ id, image, title, price, del }) {
         </div>
         <div className="font-bold text-red-700">{price}</div>
         <div>
-          <button onClick={() => del(id)} className="p-2">
+          <button onClick={() => removeFromCart(id)} className="p-2">
             <MdDelete className="text-2xl text-red-600 hover:text-red-800" />
           </button>
         </div>

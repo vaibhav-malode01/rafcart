@@ -4,7 +4,7 @@ export default function SearchBox() {
       <form class="max-w-md mx-auto">
         <label
           for="default-search"
-          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
         >
           Search
         </label>
@@ -30,7 +30,7 @@ export default function SearchBox() {
             <input
               type="search"
               id="default-search"
-              className=" block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-sm bg-gray-50   dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  h-10 w-300 "
+              className=" block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-sm bg-gray-50   dark:border-gray-600 dark:placeholder-gray-400 dark:text-black-400  h-10 w-300 "
               placeholder="Search"
               required
             />

@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 
-export default function Card({ title, image }) {
+export default function Card({ id, title, image, price, category, brand }) {
   return (
     <>
       <div className="h-[300px] w-[280px] ">
@@ -13,7 +13,7 @@ export default function Card({ title, image }) {
         <div className="ml-3 gap-y-2 ">
           <h3 className="text-black  font-bold tracking-wide"> {title}</h3>
           <div className="flex gap-x-2">
-            <h3 className="text-red-600 font-bold ">$45.00</h3>
+            <h3 className="text-red-600 font-bold ">{price}</h3>
             <h3 className="text-gray-600  line-through">55.00</h3>
           </div>
           <div className="flex ml-0">

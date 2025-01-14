@@ -1,11 +1,16 @@
 import React from "react";
 
-export default function Checks({ name, Count }) {
+export default function Checks({ name, Count, handel }) {
   return (
     <div>
       <div className="flex justify-between">
         <div>
-          <input type="checkbox" name={name} id="" />
+          <input
+            type="checkbox"
+            name={name}
+            id=""
+            onSelect={() => handel({ name })}
+          />
           <label htmlFor="Bedroom">{name}</label>
         </div>
         <h3>

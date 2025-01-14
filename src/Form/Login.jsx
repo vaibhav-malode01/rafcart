@@ -1,11 +1,11 @@
 import { Checkbox } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 
 export default function Login() {
   const [data, setData] = useState({ email: "", password: "" });
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
 
   const Schema = z.object({
     email: z.string().email("Invalid Email"),
@@ -16,21 +16,26 @@ export default function Login() {
     event.preventDefault();
     const result = Schema.safeParse(data);
     if (result.success) {
-      setError(""); 
-      alert("Form submitted successfully"); 
+      setError("");
+      alert("Form submitted successfully");
     } else {
       setError(result.error.errors[0]?.message || "Validation failed"); // Set the error message
     }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0), [data];
+  });
   let handelInput = (event) => {
     setData((prevData) => {
-      const updatedData = { ...prevData, [event.target.name]: event.target.value };
-      
+      const updatedData = {
+        ...prevData,
+        [event.target.name]: event.target.value,
+      };
+
       const result = Schema.safeParse(updatedData);
       if (result.success) setError("");
       return updatedData;
-
     });
   };
 
@@ -71,7 +76,7 @@ export default function Login() {
                 id=""
               />
               <br />
-              {error && <p className="text-red-500 ml-4">{error}</p>} 
+              {error && <p className="text-red-500 ml-4">{error}</p>}
               <div className="flex justify-between">
                 <div className="ml-4">
                   <Checkbox />

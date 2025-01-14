@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Cartcard from "./Cartcard";
+import CartWish from "./CartWish";
 import { useCart } from "../context/CartContext";
-
-export default function Left() {
-  const { cart } = useCart();
-
+export default function Right() {
+  const { wish } = useCart();
+  console.log(wish);
   return (
     <div className="flex flex-col gap-y-3 w-[60%] shadow-lg">
-      <h1 className="font-bold text-xl ml-8">SHOPPING CART</h1>
+      <h1 className="font-bold text-xl ml-8">WISHLIST</h1>
       <div className="flex flex-col gap-y-2 w-full pl-8 pr-8 pt-4">
-        {cart?.length > 0 ? (
-          cart.map((item, index) => (
-            <Cartcard
+        {wish?.length > 0 ? (
+          wish.map((item, index) => (
+            <CartWish
               key={item.id}
               id={item.id}
               image={item.image}
@@ -21,7 +20,7 @@ export default function Left() {
           ))
         ) : (
           <p className="text-gray-500 mt-4  text-xl font-semibold">
-            Your Cart Is Empty.
+            Your WishList Is Empty.
           </p>
         )}
       </div>

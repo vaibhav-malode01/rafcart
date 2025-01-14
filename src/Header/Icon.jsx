@@ -4,9 +4,9 @@ import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 export default function Icon() {
   return (
-    <div className="flex gap-x-3">
+    <div className="flex gap-x-3 items-center ">
       <Link to="/Wishlist">
-        <FcLike className="text-2xl" />
+        <FcLike className="text-2xl " />
       </Link>
 
       <Link to="/Cart">

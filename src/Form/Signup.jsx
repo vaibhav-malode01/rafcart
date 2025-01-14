@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import z from "zod";
 import { Link } from "react-router-dom";
 
@@ -11,9 +11,14 @@ export default function Signup() {
     term: false,
   });
 
-  const [firstError, setFirstError] = useState(""); 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
 
-  const schema = z.object({
+  const [firstError, setFirstError] = useState("");
+
+  const schema = z
+    .object({
       fullname: z.string().min(1, "Name should not be empty"),
       email: z.string().email("Invalid Email"),
       password: z.string().min(8, "Password should be at least 8 characters"),
@@ -24,7 +29,7 @@ export default function Signup() {
     })
     .refine((data) => data.password === data.confirm, {
       message: "Passwords do not match",
-      path: ["confirm"], 
+      path: ["confirm"],
     });
 
   const handleSubmit = (event) => {
@@ -32,7 +37,7 @@ export default function Signup() {
     const result = schema.safeParse(data);
 
     if (result.success) {
-      setFirstError(""); 
+      setFirstError("");
       alert("Form submitted Successfully");
     } else {
       setFirstError(result.error.errors[0]?.message || "Validation failed");
@@ -107,7 +112,6 @@ export default function Signup() {
                 placeholder="********"
               />
 
-              
               {firstError && (
                 <p className="text-red-500 ml-16 mt-2">{firstError}</p>
               )}
